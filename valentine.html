@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Valentine 💖</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      color: white;
+      padding-top: 80px;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 42px;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 40px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    #yes {
+      background-color: #ffeb3b;
+      color: #d81b60;
+      margin-right: 20px;
+    }
+
+    #no {
+      background-color: #f44336;
+      color: white;
+      position: absolute;
+    }
+
+    #message {
+      margin-top: 40px;
+      font-size: 26px;
+      display: none;
+    }
+
+    .heart {
+      font-size: 50px;
+      animation: float 1s infinite alternate;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-20px); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Kannapuu 💕</h1>
+  <h2>Will you be my Valentine? 💘</h2>
+
+  <button id="yes" onclick="yesClicked()">Yes ❤️</button>
+  <button id="no" onmouseover="moveNo()">No 🙈</button>
+
+  <div id="message">
+    <p>You just made me the happiest girl alive 🥰</p>
+    <p>Kannapuu, I choose you today, tomorrow, and forever 💖</p>
+    <div class="heart">💖 💖 💖</div>
+    <p>Happy Valentine’s Day, my love 💋</p>
+  </div>
+
+  <script>
+    function yesClicked() {
+      document.getElementById("message").style.display = "block";
+      setTimeout(() => {
+        alert("You’re stuck with me forever 😘");
+      }, 800);
+    }
+
+    function moveNo() {
+      const noBtn = document.getElementById("no");
+      const x = Math.random() * (window.innerWidth - 150);
+      const y = Math.random() * (window.innerHeight - 150);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+  </script>
+
+</body>
+</html>
